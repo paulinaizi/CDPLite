@@ -2,6 +2,7 @@ from tkinter import filedialog, messagebox
 import os
 import shutil
 from datetime import datetime
+from .config import STAGING_DIR
 
 def copy_with_timestamp(src, dest):
     file_name = os.path.basename(src)
@@ -12,10 +13,9 @@ def copy_with_timestamp(src, dest):
     shutil.copy2(src, dest_path)
 
 def import_files():
-    staging_dir = os.path.join(os.path.dirname(__file__), "..", "staging")
-    os.makedirs(staging_dir, exist_ok=True)
+    os.makedirs(STAGING_DIR, exist_ok=True)
     files = filedialog.askopenfilenames(title="Select data files", filetypes=[("CSV and JSON Files", "*.csv *.json"), ("CSV Files", "*.csv"), ("JSON Files", "*.json")])
     if files:
         for file in files:
-            copy_with_timestamp(file, staging_dir)
+            copy_with_timestamp(file, STAGING_DIR)
         messagebox.showinfo("Import complete", f"{len(files)} files added.")
