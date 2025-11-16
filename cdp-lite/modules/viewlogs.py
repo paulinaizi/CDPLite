@@ -1,10 +1,9 @@
 from tkinter import messagebox
 import os
-from .config import LOGS_DIR
+from .config import LOGS_PATH
 
 def view_logs():
-    logs_path = os.path.join(LOGS_DIR, "log.txt")
-    if os.path.exists(logs_path):
-        os.startfile(logs_path)
+    if os.path.exists(LOGS_PATH):
+        os.startfile(LOGS_PATH)
     else:
         messagebox.showwarning("File missing", "Log file not found.")

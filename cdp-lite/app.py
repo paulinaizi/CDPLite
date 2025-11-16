@@ -5,8 +5,11 @@ from modules.processdata import process_data
 from modules.rfmanalysis import rfm_analysis
 from modules.openreport import open_report
 from modules.viewlogs import view_logs
+from modules.config import init_dirs
 
 if __name__ == '__main__':
+    init_dirs()
+
     app = ttk.Window(title="CDP-Lite", themename="cosmo", resizable=(False, False))
     app.geometry("400x300")
 

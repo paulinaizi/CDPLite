@@ -13,7 +13,6 @@ def copy_with_timestamp(src, dest):
     shutil.copy2(src, dest_path)
 
 def import_files():
-    os.makedirs(STAGING_DIR, exist_ok=True)
     files = filedialog.askopenfilenames(title="Select data files", filetypes=[("CSV and JSON Files", "*.csv *.json"), ("CSV Files", "*.csv"), ("JSON Files", "*.json")])
     if files:
         for file in files:
