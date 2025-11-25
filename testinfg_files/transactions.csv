@@ -1,0 +1,201 @@
+transaction_id,customer_email,amount,date,product_category
+563302,kacperkaczmarek827@mail.com,493.38,Oct 11 2023,electronics
+652732,kacperkaczmarek827@mail.com,349.03,2023.03.15,home
+255869,mateusz.woźniak661@example.com,281.86,2024-04-15,electronics
+463480,ola.wojciechowski235@example.com,80.85,16/01/2025,beauty
+955554,pawełwoźniak560@mail.com,359.72,Sep 06 2023,sports
+717017,paweł.wróbel694@example.com,215.35,Jun 30 2025,beauty
+447829,monikadąbrowska537@mail.com,706.55,2023.05.11,beauty
+613275,piotr.szymański286@example.com,133.12,Feb 24 2025,home
+120115,paweł.woźniak855@example.com,444.44,07/06/2024,sports
+549534,bartekwojciechowski986@mail.com,411.29,2025-02-18,electronics
+164253,monikakowalska453@mail.com,690.42,Jun 08 2024,sports
+701483,pawełwoźniak561@mail.com,514.08,Aug 21 2024,fashion
+151902,adam.zielińska900@example.com,258.27,Mar 10 2024,sports
+740661,kacpernowak586@mail.com,47.53,2025-09-25,beauty
+698125,ola.wojciechowski235@example.com,731.09,Dec 30 2024,beauty
+233307,agnieszkakamiński771@mail.com,34.66,Aug 15 2025,fashion
+766585,zofia.kamiński870@example.com,131.65,2024.05.07,electronics
+113221,tomaszzielińska386@mail.com,360.35,2024.09.15,beauty
+823417,annadąbrowska480@mail.com,756.72,May 29 2024,home
+268934,karolinawiśniewska962@mail.com,726.57,2023-05-24,sports
+519526,maria.wojciechowski363@example.com,182.43,Jul 03 2023,beauty
+275042,pawełwoźniak560@mail.com,198.56,2025-04-03,home
+322848,michał.zielińska76@example.com,486.29,2025.05.09,beauty
+219231,marekkamiński347@mail.com,639.56,20/09/2024,fashion
+612740,pawełwoźniak560@mail.com,625.98,Feb 07 2024,sports
+309194,magdalenalewandowski359@mail.com,126.02,30/06/2024,home
+143896,adam.zielińska900@example.com,63.8,2024.07.28,sports
+564713,ola.piotrowska54@example.com,580.44,May 28 2023,home
+716922,marek.piotrowski693@example.com,473.27,03/05/2024,beauty
+959464,adam.lewandowski897@example.com,682.46,22/01/2025,beauty
+612959,jakub.woźniak294@example.com,265.3,Nov 24 2024,home
+887813,karolina.woźniak184@example.com,452.94,2025.07.27,fashion
+808675,tomaszwróbel460@mail.com,170.25,Aug 22 2024,fashion
+430216,karolinazieliński978@mail.com,223.03,20/05/2024,beauty
+595830,marekkamiński347@mail.com,767.98,2023.11.24,home
+595011,olawróbel184@mail.com,420.67,18/12/2024,sports
+471110,julia.zieliński845@example.com,361.78,26/04/2025,sports
+318579,kacperkamiński316@mail.com,541.04,19/05/2025,fashion
+567321,anna.zielińska996@example.com,598.7,2023-12-17,beauty
+360103,agnieszkamazur784@mail.com,725.07,Feb 08 2024,fashion
+293762,bartekkowalski302@mail.com,139.01,2024-07-23,electronics
+813354,ola.wojciechowski235@example.com,234.35,27/09/2025,beauty
+836587,ola.kowalska590@example.com,143.92,23/09/2024,electronics
+431113,piotr.woźniak570@example.com,704.9,2024-11-05,home
+691989,mateuszwoźniak449@mail.com,328.74,Feb 12 2025,fashion
+628704,anna.zielińska996@example.com,745.75,2024-02-29,home
+142146,zofia.kamiński870@example.com,451.46,Oct 09 2025,sports
+816816,ola.kowalska590@example.com,70.3,2024-12-15,beauty
+977649,mateusz.kaczmarek949@example.com,632.18,2024.10.02,beauty
+530276,pawełwoźniak560@mail.com,567.37,2024-01-27,electronics
+609168,bartek.kowalska6@example.com,271.01,03/01/2024,electronics
+392785,adam.kamiński845@example.com,535.41,2024.11.23,home
+108707,karolina.mazur761@example.com,279.07,Mar 12 2024,electronics
+219502,karolinazieliński978@mail.com,646.46,May 24 2023,fashion
+151903,katarzynakowalski484@mail.com,751.75,06/08/2024,electronics
+305862,tomaszwróbel460@mail.com,167.33,2024.08.26,sports
+289928,adam.kamiński845@example.com,732.78,Aug 14 2024,fashion
+337566,pawełwoźniak561@mail.com,355.13,Jun 23 2023,sports
+128423,bartek.kowalska6@example.com,267.71,19/10/2024,fashion
+994067,katarzynakowalski484@mail.com,37.88,2024.06.10,fashion
+105654,mareknowak642@mail.com,503.33,Nov 02 2023,electronics
+869920,monikakamiński141@mail.com,447.72,Sep 28 2023,fashion
+606456,karolina.woźniak184@example.com,226.01,2023.12.20,sports
+247229,kacperwróbel553@mail.com,102.02,2023.09.17,sports
+263257,jakub.woźniak294@example.com,374.33,2024.09.22,home
+306326,agnieszkawoźniak642@mail.com,275.22,12/02/2025,beauty
+932208,adam.kamiński845@example.com,74.83,2024.09.19,sports
+131984,ola.kowalska590@example.com,661.21,2024.07.02,beauty
+654479,pawełwoźniak560@mail.com,348.0,2024.04.18,electronics
+600123,marek.piotrowski693@example.com,486.55,2025.04.03,electronics
+360448,pawełwoźniak561@mail.com,711.54,2024.08.09,beauty
+834333,michał.nowak67@example.com,505.35,2024-04-30,beauty
+382474,marek.kowalska679@example.com,284.29,Oct 05 2025,fashion
+434544,zofia.kamiński870@example.com,217.85,30/01/2025,electronics
+420091,piotrlewandowski741@mail.com,157.93,2025.10.18,fashion
+135385,ola.piotrowska54@example.com,211.01,Mar 29 2025,home
+515198,mareknowak642@mail.com,41.91,Jul 28 2023,electronics
+219409,michał.nowak982@example.com,579.82,2025-04-10,home
+872187,maria.wojciechowski363@example.com,719.72,Apr 16 2024,fashion
+413563,olalewandowski996@mail.com,715.95,21/01/2025,electronics
+154995,annawoźniak633@mail.com,125.89,Jul 09 2023,electronics
+715508,kacpernowak586@mail.com,419.18,2024-12-07,electronics
+489334,julia.lewandowski764@example.com,99.22,2023-04-09,electronics
+159611,adam.zielińska220@example.com,131.01,Jul 02 2025,sports
+240846,magdalena.piotrowska114@example.com,510.6,11/05/2023,fashion
+473226,paweł.wróbel44@example.com,188.58,25/09/2023,fashion
+848777,piotr.szymański286@example.com,299.51,2023.10.30,home
+995107,jakub.woźniak294@example.com,491.93,2024.12.10,electronics
+450374,monikadąbrowska537@mail.com,471.0,Jun 30 2024,sports
+194016,magdalena.kaczmarek691@example.com,230.49,05/10/2024,home
+103426,marek.wróbel462@example.com,298.58,08/07/2025,sports
+853525,ola.piotrowska54@example.com,166.49,Mar 19 2025,home
+454255,agnieszkakamiński189@mail.com,351.82,19/04/2024,fashion
+295785,kacperwróbel553@mail.com,638.64,2025.11.18,fashion
+262453,karolina.mazur761@example.com,590.93,31/07/2025,electronics
+933545,adam.lewandowski897@example.com,769.46,2023.09.11,home
+266816,kacperwróbel553@mail.com,24.26,2025.01.03,beauty
+570202,paweł.wróbel44@example.com,784.97,2025.10.11,sports
+977194,bartekkowalski302@mail.com,449.68,04/04/2023,fashion
+526745,marekpiotrowska42@mail.com,30.36,Aug 08 2025,beauty
+308876,marek.kowalska679@example.com,749.26,Jul 01 2025,fashion
+233739,barteknowak832@mail.com,255.11,Oct 16 2024,fashion
+253240,bartek.kowalska6@example.com,665.6,2023-03-24,fashion
+789762,jakubwiśniewska421@mail.com,109.65,14/06/2025,fashion
+128166,agnieszkanowak394@mail.com,363.74,Jul 23 2025,home
+464244,karolinakowalska621@mail.com,266.17,Oct 08 2025,beauty
+983014,monikakamiński141@mail.com,65.89,2023-08-11,fashion
+958287,kacpernowak586@mail.com,712.29,Apr 03 2023,sports
+419137,tomaszzielińska386@mail.com,144.03,19/06/2024,home
+489354,monikadąbrowska537@mail.com,291.14,Apr 03 2025,electronics
+311834,adam.lewandowski897@example.com,518.99,2024.03.18,home
+405057,monikamazur474@mail.com,763.97,2025.10.30,beauty
+637299,monika.szymański51@example.com,556.87,29/05/2024,sports
+388882,marek.piotrowski693@example.com,466.73,2024-04-10,beauty
+136515,monika.szymański51@example.com,317.98,2024.09.15,sports
+700198,karolina.woźniak184@example.com,435.91,10/09/2024,beauty
+219113,kacperkaczmarek827@mail.com,754.99,Oct 05 2025,beauty
+851747,adam.kamiński845@example.com,599.72,Aug 09 2025,sports
+464896,tomasz.zieliński812@example.com,786.59,Sep 24 2023,electronics
+292471,annawoźniak633@mail.com,598.6,07/04/2023,electronics
+643182,anna.zielińska996@example.com,707.41,15/08/2025,beauty
+688457,monika.kowalski161@example.com,788.51,01/09/2023,fashion
+181111,mateuszszymański157@mail.com,790.27,2023.12.11,home
+194811,julia.mazur778@example.com,796.43,25/06/2023,sports
+725282,adam.zielińska900@example.com,249.52,Mar 09 2023,sports
+940884,annadąbrowska480@mail.com,130.8,14/03/2024,home
+341586,mateusz.woźniak661@example.com,114.93,Apr 19 2023,fashion
+793689,karolina.woźniak184@example.com,22.39,20/11/2023,home
+281719,karolina.woźniak184@example.com,265.01,2024.06.15,fashion
+210731,bartekwojciechowski986@mail.com,547.48,24/04/2023,fashion
+632050,agnieszkamazur784@mail.com,493.24,2023-05-12,beauty
+689696,barteknowak832@mail.com,180.71,23/03/2024,beauty
+361576,karolinawiśniewska962@mail.com,510.46,Aug 28 2025,home
+724687,mateusz.woźniak661@example.com,107.82,2024.12.01,beauty
+113939,olawróbel184@mail.com,423.93,04/12/2023,sports
+383156,mateusz.woźniak661@example.com,597.01,2024-01-31,home
+581576,monikadąbrowska537@mail.com,314.68,2025.05.26,home
+666555,annawojciechowski203@mail.com,655.03,Jun 28 2025,electronics
+218001,annawojciechowski203@mail.com,753.73,2023.08.12,beauty
+822282,olawróbel184@mail.com,74.04,2024.06.18,electronics
+782214,ola.wojciechowski235@example.com,560.85,Sep 18 2025,beauty
+443843,katarzynalewandowski468@mail.com,771.2,Feb 13 2024,fashion
+703524,annadąbrowska480@mail.com,268.67,2024-09-06,sports
+933904,adam.zielińska900@example.com,63.43,2025-05-29,beauty
+516824,agnieszkakamiński771@mail.com,170.3,2024-06-06,electronics
+326231,annawojciechowski203@mail.com,218.42,Mar 15 2023,home
+660923,michał.nowak67@example.com,167.8,2024.12.19,beauty
+428053,jakubwiśniewska421@mail.com,566.15,27/11/2024,sports
+917372,karolina.woźniak184@example.com,329.58,2025-05-01,sports
+325982,magdalena.kaczmarek691@example.com,379.0,2024-11-10,electronics
+530350,kacper.dąbrowska868@example.com,241.97,2024.05.24,electronics
+808466,monikamazur474@mail.com,404.02,2023.10.01,home
+490099,katarzynapiotrowska844@mail.com,426.65,2023-05-02,beauty
+970916,monikakamiński141@mail.com,576.28,2024-04-14,fashion
+542741,tomasz.zieliński812@example.com,305.23,2023-07-01,electronics
+328611,ola.piotrowska54@example.com,700.05,2025.11.06,electronics
+181856,magdalena.piotrowski454@example.com,196.43,2025.11.25,home
+436814,monikazieliński599@mail.com,783.41,2024-03-03,sports
+878086,agnieszkanowak394@mail.com,298.41,2024-10-26,beauty
+136221,kacpernowak586@mail.com,732.79,Aug 26 2025,electronics
+128311,marek.mazur685@example.com,272.83,27/12/2023,home
+655472,mateusz.piotrowski275@example.com,586.71,05/12/2023,beauty
+681388,mateuszszymański157@mail.com,620.28,Jan 25 2024,electronics
+407548,marek.piotrowski693@example.com,329.7,2023-12-18,electronics
+507534,jakubwiśniewska421@mail.com,221.3,2025.07.21,home
+550990,pawełgrabowska644@mail.com,670.25,Mar 10 2023,sports
+621640,kacperwróbel553@mail.com,714.56,2025-08-09,home
+178532,ola.kowalska590@example.com,37.37,2024-10-29,fashion
+629921,adam.zielińska900@example.com,747.83,2025.11.13,home
+411047,mateuszwoźniak449@mail.com,261.28,2024.03.27,sports
+533247,paweł.wróbel44@example.com,781.18,14/08/2025,electronics
+607613,monikadąbrowska537@mail.com,367.68,Jun 05 2025,sports
+810098,bartekkowalski302@mail.com,360.63,12/03/2023,home
+593478,agnieszkakamiński771@mail.com,594.43,Jul 10 2025,fashion
+918371,julia.mazur778@example.com,46.37,2025.08.11,fashion
+524056,bartekkowalski302@mail.com,71.8,2025.10.16,sports
+480063,marek.mazur685@example.com,277.94,2023-11-09,sports
+294048,annawoźniak633@mail.com,654.74,2025.10.19,home
+678343,tomasz.piotrowska21@example.com,722.04,2023.04.18,sports
+431982,paweł.wróbel44@example.com,101.71,2024-10-06,home
+410326,marekkamiński347@mail.com,117.52,31/10/2025,fashion
+271080,ola.kowalska590@example.com,656.79,2025-10-11,beauty
+958908,kacpermazur78@mail.com,496.88,2023.12.01,beauty
+526195,adam.lewandowski897@example.com,644.85,2024-09-19,sports
+671577,marekkamiński347@mail.com,468.17,2024-12-22,home
+139286,marekkamiński347@mail.com,791.98,02/06/2025,beauty
+473869,olawróbel184@mail.com,130.2,13/08/2024,sports
+922155,mateuszmazur329@mail.com,673.94,2024-10-11,fashion
+799189,monikamazur474@mail.com,71.6,2024-09-14,fashion
+150368,karolinanowak565@mail.com,608.07,2024.12.17,beauty
+789647,jakub.woźniak294@example.com,726.33,2024-09-14,electronics
+650065,marek.wróbel462@example.com,109.35,28/03/2024,sports
+418258,pawełgrabowska644@mail.com,283.32,2023-07-06,electronics
+442328,paweł.wróbel44@example.com,554.09,Apr 22 2025,electronics
+667149,bartek.wiśniewska33@example.com,80.58,2023.03.15,home
+102439,bartekwiśniewska372@mail.com,115.27,2025-11-09,electronics
+409719,katarzynapiotrowska844@mail.com,490.98,2023-03-04,beauty
+198195,bartekkowalski302@mail.com,166.7,2024.07.05,fashion
+171795,katarzynakowalski484@mail.com,630.32,Jun 22 2025,beauty
+532629,tomaszzielińska386@mail.com,145.65,2024.06.26,home

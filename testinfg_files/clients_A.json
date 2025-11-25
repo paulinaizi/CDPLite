@@ -1,0 +1,502 @@
+[
+    {
+        "fullName": "Anna Zieli\u0144ska",
+        "mail": "anna.zieli\u0144ska996@example.com",
+        "phoneNumber": "+48 790-170-935",
+        "city": "wroc\u0142aw",
+        "createdAt": "May 05 2023",
+        "customerId": null,
+        "gender": "M",
+        "age": 41
+    },
+    {
+        "fullName": "Pawe\u0142 Kami\u0144ski",
+        "mail": "pawe\u0142.kami\u0144ski586@example.com",
+        "phoneNumber": "(+48)708280880",
+        "city": "Gda\u0144sk",
+        "createdAt": "2024.04.14",
+        "customerId": null,
+        "gender": "M",
+        "age": null
+    },
+    {
+        "fullName": "Bartek Kowalska",
+        "mail": "bartek.kowalska6@example.com",
+        "phoneNumber": "+48 510-117-636",
+        "city": "\u0141\u00f3d\u017a",
+        "createdAt": "Aug 11 2024",
+        "customerId": null,
+        "gender": "female",
+        "age": null
+    },
+    {
+        "fullName": "Bartek Grabowska",
+        "mail": "bartek.grabowska151@example.com",
+        "phoneNumber": "(+48)527171964",
+        "city": "Wroc\u0142aw",
+        "createdAt": "Nov 30 2023",
+        "customerId": 7451,
+        "gender": "M",
+        "age": null
+    },
+    {
+        "fullName": "Piotr Wo\u017aniak",
+        "mail": "piotr.wo\u017aniak570@example.com",
+        "phoneNumber": "763762134",
+        "city": "\u0141\u00f3d\u017a",
+        "createdAt": "Nov 14 2023",
+        "customerId": 3977,
+        "gender": "Male",
+        "age": "57 years"
+    },
+    {
+        "fullName": "Ola Piotrowska",
+        "mail": "ola.piotrowska54@example.com",
+        "phoneNumber": "(+48)772785018",
+        "city": "wroc\u0142aw",
+        "createdAt": "2023-09-09",
+        "customerId": null,
+        "gender": "M",
+        "age": null
+    },
+    {
+        "fullName": "Marek Wr\u00f3bel",
+        "mail": "marek.wr\u00f3bel462@example.com",
+        "phoneNumber": "+48 599-573-850",
+        "city": "wroc\u0142aw",
+        "createdAt": "03/02/2025",
+        "customerId": 3889,
+        "gender": "female",
+        "age": "27 years"
+    },
+    {
+        "fullName": "Piotr Szyma\u0144ski",
+        "mail": "piotr.szyma\u0144ski286@example.com",
+        "phoneNumber": "(+48)714221162",
+        "city": "Warszawa",
+        "createdAt": "2023-07-29",
+        "customerId": 1350,
+        "gender": "Male",
+        "age": 57
+    },
+    {
+        "fullName": "Ola Wojciechowski",
+        "mail": "ola.wojciechowski235@example.com",
+        "phoneNumber": "(+48)779592600",
+        "city": "wroc\u0142aw",
+        "createdAt": "2024.08.26",
+        "customerId": null,
+        "gender": "Female",
+        "age": 23
+    },
+    {
+        "fullName": "Adam Kami\u0144ski",
+        "mail": "adam.kami\u0144ski845@example.com",
+        "phoneNumber": "+48 679-487-430",
+        "city": "Warszawa",
+        "createdAt": "2024-04-11",
+        "customerId": 1633,
+        "gender": null,
+        "age": null
+    },
+    {
+        "fullName": "Adam Zieli\u0144ska",
+        "mail": "adam.zieli\u0144ska220@example.com",
+        "phoneNumber": "583037128",
+        "city": "WroclAw",
+        "createdAt": "Sep 08 2024",
+        "customerId": null,
+        "gender": null,
+        "age": null
+    },
+    {
+        "fullName": "Adam Zieli\u0144ska",
+        "mail": "adam.zieli\u0144ska900@example.com",
+        "phoneNumber": "(+48)683966591",
+        "city": "Warszawa",
+        "createdAt": "Sep 27 2023",
+        "customerId": null,
+        "gender": "Male",
+        "age": null
+    },
+    {
+        "fullName": "Micha\u0142 Nowak",
+        "mail": "micha\u0142.nowak982@example.com",
+        "phoneNumber": "(+48)592246835",
+        "city": "Pozna\u0144",
+        "createdAt": "2025.02.23",
+        "customerId": null,
+        "gender": "Male",
+        "age": 22
+    },
+    {
+        "fullName": "Zofia Nowak",
+        "mail": "zofia.nowak172@example.com",
+        "phoneNumber": "(+48)667148845",
+        "city": "Wroc\u0142aw",
+        "createdAt": "Jun 12 2024",
+        "customerId": null,
+        "gender": "M",
+        "age": 52
+    },
+    {
+        "fullName": "Tomasz Zieli\u0144ski",
+        "mail": "tomasz.zieli\u0144ski812@example.com",
+        "phoneNumber": "+48 505-157-254",
+        "city": "Warszawa",
+        "createdAt": "01/08/2024",
+        "customerId": null,
+        "gender": "F",
+        "age": 60
+    },
+    {
+        "fullName": "Magdalena Piotrowski",
+        "mail": "magdalena.piotrowski454@example.com",
+        "phoneNumber": "+48 566-423-680",
+        "city": "Gda\u0144sk",
+        "createdAt": "26/09/2024",
+        "customerId": null,
+        "gender": "female",
+        "age": null
+    },
+    {
+        "fullName": "Monika Kowalski",
+        "mail": "monika.kowalski161@example.com",
+        "phoneNumber": "761622753",
+        "city": "Krak\u00f3w",
+        "createdAt": "2023.11.16",
+        "customerId": 6070,
+        "gender": "male",
+        "age": null
+    },
+    {
+        "fullName": "Adam Lewandowski",
+        "mail": "adam.lewandowski897@example.com",
+        "phoneNumber": "643464833",
+        "city": "WroclAw",
+        "createdAt": "06/04/2023",
+        "customerId": 6969,
+        "gender": "female",
+        "age": "55 years"
+    },
+    {
+        "fullName": "Tomasz Piotrowska",
+        "mail": "tomasz.piotrowska21@example.com",
+        "phoneNumber": "+48 690-131-769",
+        "city": "Pozna\u0144",
+        "createdAt": "2023.12.08",
+        "customerId": 7457,
+        "gender": "F",
+        "age": 40
+    },
+    {
+        "fullName": "Maria Wojciechowski",
+        "mail": "maria.wojciechowski363@example.com",
+        "phoneNumber": "780964538",
+        "city": "wroc\u0142aw",
+        "createdAt": "2024.07.18",
+        "customerId": null,
+        "gender": "male",
+        "age": "56 years"
+    },
+    {
+        "fullName": "Pawe\u0142 Wo\u017aniak",
+        "mail": "pawe\u0142.wo\u017aniak855@example.com",
+        "phoneNumber": "(+48)627482530",
+        "city": "WroclAw",
+        "createdAt": "Aug 09 2024",
+        "customerId": null,
+        "gender": "Male",
+        "age": 51
+    },
+    {
+        "fullName": "Ola Piotrowski",
+        "mail": "ola.piotrowski520@example.com",
+        "phoneNumber": "(+48)591070144",
+        "city": "Krak\u00f3w",
+        "createdAt": "01/06/2025",
+        "customerId": null,
+        "gender": null,
+        "age": 19
+    },
+    {
+        "fullName": "Mateusz Wo\u017aniak",
+        "mail": "mateusz.wo\u017aniak661@example.com",
+        "phoneNumber": "+48 765-804-391",
+        "city": "Gda\u0144sk",
+        "createdAt": "23/07/2025",
+        "customerId": 7924,
+        "gender": "M",
+        "age": null
+    },
+    {
+        "fullName": "Magdalena Piotrowska",
+        "mail": "magdalena.piotrowska114@example.com",
+        "phoneNumber": "+48 535-213-396",
+        "city": "Pozna\u0144",
+        "createdAt": "25/07/2025",
+        "customerId": 2477,
+        "gender": "male",
+        "age": 26
+    },
+    {
+        "fullName": "Micha\u0142 Nowak",
+        "mail": "micha\u0142.nowak67@example.com",
+        "phoneNumber": "(+48)703505561",
+        "city": "wroc\u0142aw",
+        "createdAt": "2024-07-30",
+        "customerId": null,
+        "gender": "female",
+        "age": "48 years"
+    },
+    {
+        "fullName": "Magdalena Wr\u00f3bel",
+        "mail": "magdalena.wr\u00f3bel896@example.com",
+        "phoneNumber": "+48 582-933-711",
+        "city": "Wroc\u0142aw",
+        "createdAt": "16/07/2024",
+        "customerId": null,
+        "gender": "F",
+        "age": "31 years"
+    },
+    {
+        "fullName": "Kacper D\u0105browska",
+        "mail": "kacper.d\u0105browska868@example.com",
+        "phoneNumber": "(+48)773980751",
+        "city": "Wroclaw",
+        "createdAt": "2025.09.25",
+        "customerId": null,
+        "gender": "female",
+        "age": 54
+    },
+    {
+        "fullName": "Marek Mazur",
+        "mail": "marek.mazur685@example.com",
+        "phoneNumber": "591043808",
+        "city": "Gda\u0144sk",
+        "createdAt": "Dec 14 2023",
+        "customerId": null,
+        "gender": "F",
+        "age": null
+    },
+    {
+        "fullName": "Micha\u0142 Zieli\u0144ska",
+        "mail": "micha\u0142.zieli\u0144ska76@example.com",
+        "phoneNumber": "703425406",
+        "city": "Pozna\u0144",
+        "createdAt": "2024.07.25",
+        "customerId": null,
+        "gender": "M",
+        "age": "47 years"
+    },
+    {
+        "fullName": "Julia Lewandowski",
+        "mail": "julia.lewandowski764@example.com",
+        "phoneNumber": "612999607",
+        "city": "Wroclaw",
+        "createdAt": "2023-08-02",
+        "customerId": null,
+        "gender": "M",
+        "age": "45 years"
+    },
+    {
+        "fullName": "Monika Szyma\u0144ski",
+        "mail": "monika.szyma\u0144ski51@example.com",
+        "phoneNumber": "586515692",
+        "city": "WroclAw",
+        "createdAt": "2025-10-22",
+        "customerId": 4332,
+        "gender": "female",
+        "age": 44
+    },
+    {
+        "fullName": "Julia Wr\u00f3bel",
+        "mail": "julia.wr\u00f3bel989@example.com",
+        "phoneNumber": "589583223",
+        "city": "wroc\u0142aw",
+        "createdAt": "2023-04-11",
+        "customerId": 1432,
+        "gender": "Female",
+        "age": 59
+    },
+    {
+        "fullName": "Micha\u0142 Kami\u0144ski",
+        "mail": "micha\u0142.kami\u0144ski83@example.com",
+        "phoneNumber": "+48 711-330-676",
+        "city": "Wroclaw",
+        "createdAt": "09/03/2024",
+        "customerId": 8736,
+        "gender": "Male",
+        "age": null
+    },
+    {
+        "fullName": "Marek Kowalska",
+        "mail": "marek.kowalska679@example.com",
+        "phoneNumber": "790531470",
+        "city": "Pozna\u0144",
+        "createdAt": "2023-08-03",
+        "customerId": 2775,
+        "gender": "M",
+        "age": null
+    },
+    {
+        "fullName": "Zofia Kami\u0144ski",
+        "mail": "zofia.kami\u0144ski870@example.com",
+        "phoneNumber": "(+48)791542931",
+        "city": "wroc\u0142aw",
+        "createdAt": "16/04/2025",
+        "customerId": null,
+        "gender": null,
+        "age": 52
+    },
+    {
+        "fullName": "Karolina Mazur",
+        "mail": "karolina.mazur761@example.com",
+        "phoneNumber": "+48 634-364-455",
+        "city": "WroclAw",
+        "createdAt": "2023-09-22",
+        "customerId": null,
+        "gender": "F",
+        "age": "23 years"
+    },
+    {
+        "fullName": "Jakub Wo\u017aniak",
+        "mail": "jakub.wo\u017aniak294@example.com",
+        "phoneNumber": "+48 748-918-460",
+        "city": "Pozna\u0144",
+        "createdAt": "2024.05.24",
+        "customerId": 2350,
+        "gender": "female",
+        "age": "31 years"
+    },
+    {
+        "fullName": "Pawe\u0142 Wr\u00f3bel",
+        "mail": "pawe\u0142.wr\u00f3bel44@example.com",
+        "phoneNumber": "(+48)620345395",
+        "city": "\u0141\u00f3d\u017a",
+        "createdAt": "2025.02.20",
+        "customerId": 4205,
+        "gender": "Male",
+        "age": 26
+    },
+    {
+        "fullName": "Bartek Wi\u015bniewska",
+        "mail": "bartek.wi\u015bniewska33@example.com",
+        "phoneNumber": "+48 704-147-349",
+        "city": "\u0141\u00f3d\u017a",
+        "createdAt": "2025.01.09",
+        "customerId": null,
+        "gender": "male",
+        "age": null
+    },
+    {
+        "fullName": "Pawe\u0142 Wr\u00f3bel",
+        "mail": "pawe\u0142.wr\u00f3bel694@example.com",
+        "phoneNumber": "682703375",
+        "city": "Gda\u0144sk",
+        "createdAt": "14/07/2023",
+        "customerId": null,
+        "gender": null,
+        "age": 37
+    },
+    {
+        "fullName": "Adam Piotrowska",
+        "mail": "adam.piotrowska421@example.com",
+        "phoneNumber": "+48 723-999-478",
+        "city": "Wroc\u0142aw",
+        "createdAt": "2024.12.05",
+        "customerId": null,
+        "gender": "M",
+        "age": 18
+    },
+    {
+        "fullName": "Karolina Wo\u017aniak",
+        "mail": "karolina.wo\u017aniak184@example.com",
+        "phoneNumber": "(+48)592581791",
+        "city": "Gda\u0144sk",
+        "createdAt": "2024-06-17",
+        "customerId": null,
+        "gender": "Male",
+        "age": null
+    },
+    {
+        "fullName": "Mateusz Piotrowski",
+        "mail": "mateusz.piotrowski275@example.com",
+        "phoneNumber": "643650257",
+        "city": "Pozna\u0144",
+        "createdAt": "2023.08.18",
+        "customerId": 4191,
+        "gender": "male",
+        "age": "59 years"
+    },
+    {
+        "fullName": "Julia Mazur",
+        "mail": "julia.mazur778@example.com",
+        "phoneNumber": "+48 652-447-238",
+        "city": "Wroclaw",
+        "createdAt": "2023.10.15",
+        "customerId": null,
+        "gender": "female",
+        "age": "60 years"
+    },
+    {
+        "fullName": "Julia Zieli\u0144ski",
+        "mail": "julia.zieli\u0144ski845@example.com",
+        "phoneNumber": "593405383",
+        "city": "Gda\u0144sk",
+        "createdAt": "20/05/2023",
+        "customerId": 6428,
+        "gender": null,
+        "age": "58 years"
+    },
+    {
+        "fullName": "Ola Kowalska",
+        "mail": "ola.kowalska590@example.com",
+        "phoneNumber": "(+48)520347514",
+        "city": "Pozna\u0144",
+        "createdAt": "Mar 16 2024",
+        "customerId": 1400,
+        "gender": "female",
+        "age": "20 years"
+    },
+    {
+        "fullName": "Bartek Wo\u017aniak",
+        "mail": "bartek.wo\u017aniak428@example.com",
+        "phoneNumber": "+48 539-603-211",
+        "city": "Pozna\u0144",
+        "createdAt": "28/09/2025",
+        "customerId": 7352,
+        "gender": "M",
+        "age": null
+    },
+    {
+        "fullName": "Magdalena Kaczmarek",
+        "mail": "magdalena.kaczmarek691@example.com",
+        "phoneNumber": "+48 538-582-755",
+        "city": "Krak\u00f3w",
+        "createdAt": "Apr 01 2025",
+        "customerId": 1817,
+        "gender": null,
+        "age": null
+    },
+    {
+        "fullName": "Marek Piotrowski",
+        "mail": "marek.piotrowski693@example.com",
+        "phoneNumber": "+48 675-831-344",
+        "city": "Pozna\u0144",
+        "createdAt": "2024-11-07",
+        "customerId": 7917,
+        "gender": "male",
+        "age": null
+    },
+    {
+        "fullName": "Mateusz Kaczmarek",
+        "mail": "mateusz.kaczmarek949@example.com",
+        "phoneNumber": "(+48)532163478",
+        "city": "Gda\u0144sk",
+        "createdAt": "Mar 03 2025",
+        "customerId": 2107,
+        "gender": null,
+        "age": null
+    }
+]
