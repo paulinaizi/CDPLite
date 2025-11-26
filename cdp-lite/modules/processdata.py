@@ -2,6 +2,7 @@ import os
 import shutil
 import re
 from datetime import datetime
+
 import pandas as pd
 import mysql.connector
 from mysql.connector import Error
@@ -9,28 +10,29 @@ from tkinter import messagebox
 
 from .config import STAGING_DIR, PROCESSED_DIR, LOGS_PATH
 
-DB_HOST = 'localhost'
+DB_HOST = "localhost"
 DB_PORT = 3306
-DB_USER = 'cdp_user'
-DB_PASSWORD = 'cdp_12345'
+DB_USER = "cdp_user"
+DB_PASSWORD = "cdp12345"
 DB_NAME = "cdp_lite"
 
-LOG_FILE_PATH = LOGS_PATH
 
 def log_message(message: str) -> None:
-    os.makedirs(os.path.dirname(LOG_FILE_PATH), exist_ok=True)
+    os.makedirs(os.path.dirname(LOGS_PATH), exist_ok=True)
     ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open(LOG_FILE_PATH, "a", encoding="utf-8") as f:
+    with open(LOGS_PATH, "a", encoding="utf-8") as f:
         f.write(f"[{ts}] {message}\n")
+
 
 def get_db_connection():
     return mysql.connector.connect(
-        host = DB_HOST,
-        port = DB_PORT,
-        user = DB_USER,
-        password = DB_PASSWORD,
-        database = DB_NAME
+        host=DB_HOST,
+        port=DB_PORT,
+        user=DB_USER,
+        password=DB_PASSWORD,
+        database=DB_NAME,
     )
+
 
 def ensure_tables_exist(conn):
     create_customers = """
@@ -71,6 +73,7 @@ def normalize_email(value):
         return None
     return str(value).strip().lower()
 
+
 def normalize_phone(value):
     if pd.isna(value):
         return None
@@ -82,11 +85,13 @@ def normalize_phone(value):
         return None
     return digits
 
+
 def normalize_city(value):
     if pd.isna(value):
         return None
     s = str(value).strip()
     return s.lower().capitalize()
+
 
 def normalize_gender(value):
     if pd.isna(value):
@@ -98,6 +103,7 @@ def normalize_gender(value):
         return "male"
     return None
 
+
 def parse_age_from_raw(value):
     if pd.isna(value):
         return None
@@ -106,6 +112,7 @@ def parse_age_from_raw(value):
     if m:
         return int(m.group(1))
     return None
+
 
 def age_from_birth_year(value):
     if pd.isna(value):
@@ -120,8 +127,10 @@ def age_from_birth_year(value):
         return age
     return None
 
+
 def to_datetime_safe(series, dayfirst=True):
     return pd.to_datetime(series, errors="coerce", dayfirst=dayfirst)
+
 
 def unify_customers_from_source_a(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
@@ -143,12 +152,37 @@ def unify_customers_from_source_a(df: pd.DataFrame) -> pd.DataFrame:
 
     df["first_name"] = first_names
     df["last_name"] = last_names
+
     df["email"] = df["mail"].apply(normalize_email) if "mail" in df.columns else None
     df["phone"] = df["phoneNumber"].apply(normalize_phone) if "phoneNumber" in df.columns else None
     df["city_unified"] = df["city"].apply(normalize_city) if "city" in df.columns else None
     df["gender_unified"] = df["gender"].apply(normalize_gender) if "gender" in df.columns else None
     df["age_unified"] = df["age"].apply(parse_age_from_raw) if "age" in df.columns else None
     df["created_at_unified"] = to_datetime_safe(df["createdAt"]) if "createdAt" in df.columns else None
+
+    return pd.DataFrame({
+        "first_name": df["first_name"],
+        "last_name": df["last_name"],
+        "email": df["email"],
+        "phone": df["phone"],
+        "city": df["city_unified"],
+        "gender": df["gender_unified"],
+        "age": df["age_unified"],
+        "created_at": df["created_at_unified"],
+    })
+
+
+def unify_customers_from_source_b(df: pd.DataFrame) -> pd.DataFrame:
+    df = df.copy()
+
+    df["first_name_unified"] = df["first_name"].astype(str).str.strip().str.title()
+    df["last_name_unified"] = df["last_name"].astype(str).str.strip().str.title()
+    df["email_unified"] = df["email"].apply(normalize_email)
+    df["phone_unified"] = df["phone"].apply(normalize_phone)
+    df["city_unified"] = df["city_name"].apply(normalize_city)
+    df["gender_unified"] = df["sex"].apply(normalize_gender) if "sex" in df.columns else None
+    df["age_unified"] = df["birth_year"].apply(age_from_birth_year) if "birth_year" in df.columns else None
+    df["created_at_unified"] = to_datetime_safe(df["signup_date"], dayfirst=False)
 
     return pd.DataFrame({
         "first_name": df["first_name_unified"],
@@ -160,6 +194,7 @@ def unify_customers_from_source_a(df: pd.DataFrame) -> pd.DataFrame:
         "age": df["age_unified"],
         "created_at": df["created_at_unified"],
     })
+
 
 def unify_transactions(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
@@ -176,18 +211,20 @@ def unify_transactions(df: pd.DataFrame) -> pd.DataFrame:
         "product_category": df["product_category"],
     })
 
+
 def deduplicate_customers(df: pd.DataFrame) -> pd.DataFrame:
     df = df.copy()
     df = df.sort_values(by=["created_at"], ascending=True)
     df = df.drop_duplicates(subset=["email"], keep="first")
     return df
 
+
 def upsert_customers(conn, customers_df: pd.DataFrame):
     customers_df = customers_df.copy()
     customers_df = customers_df[~customers_df["email"].isna()]
     if customers_df.empty:
         return
-    
+
     sql = """
     INSERT INTO customers
         (first_name, last_name, email, phone, city, gender, age, created_at)
@@ -213,12 +250,14 @@ def upsert_customers(conn, customers_df: pd.DataFrame):
             row["phone"],
             row["city"],
             row["gender"],
-            int(row["age"]) if not pd.insa(row["age"]) else None,
+            int(row["age"]) if not pd.isna(row["age"]) else None,
             row["created_at"].to_pydatetime() if not pd.isna(row["created_at"]) else None,
         ))
+
     cursor.executemany(sql, data)
     conn.commit()
     cursor.close()
+
 
 def insert_transactions(conn, transactions_df: pd.DataFrame):
     transactions_df = transactions_df.copy()
@@ -229,7 +268,7 @@ def insert_transactions(conn, transactions_df: pd.DataFrame):
     ]
     if transactions_df.empty:
         return
-    
+
     cursor = conn.cursor(dictionary=True)
     cursor.execute("SELECT id, email FROM customers;")
     rows = cursor.fetchall()
@@ -269,6 +308,7 @@ def insert_transactions(conn, transactions_df: pd.DataFrame):
     cursor.executemany(sql, data)
     conn.commit()
     cursor.close()
+
 
 def process_data():
     try:
@@ -330,7 +370,7 @@ def process_data():
         except Exception as e:
             messagebox.showerror(
                 "Process data",
-                f"Nie udało się połączyć z bazą danych.\nSprawdź Docker / MySQL.\n\n{e}"
+                f"Nie udało się połączyć z bazą danych. Sprawdź Docker / MySQL.\n\n{e}"
             )
             return
 
@@ -347,6 +387,7 @@ def process_data():
 
         conn.close()
 
+        # przeniesienie poprawnie przetworzonych plików
         for src in processed_files:
             dst = os.path.join(PROCESSED_DIR, os.path.basename(src))
             try:
@@ -358,6 +399,7 @@ def process_data():
 
     except Exception as e:
         messagebox.showerror("Process data", f"Wystąpił błąd:\n{e}")
+
 
    
 
