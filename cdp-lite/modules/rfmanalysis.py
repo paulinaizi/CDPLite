@@ -51,7 +51,6 @@ def save_rfm_results(rfm: pd.DataFrame):
 
 def rfm_analysis():
     try:
-        log_message("Starting RFM analysis...")
         df = fetch_data()
         if df.empty:
             log_message("No data available for RFM analysis.")
