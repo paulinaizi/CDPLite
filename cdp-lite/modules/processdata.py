@@ -8,7 +8,7 @@ import mysql.connector
 from mysql.connector import Error
 from tkinter import messagebox
 
-from .config import STAGING_DIR, PROCESSED_DIR, LOGS_PATH
+from .config import STAGING_DIR, PROCESSED_DIR
 from .logger import log_message
 
 DB_HOST = "localhost"
@@ -316,7 +316,7 @@ def process_data():
         ]
 
         if not files:
-            messagebox.showinfo("Process data", "Brak plików w katalogu staging.")
+            messagebox.showinfo("Process data", "No files in the staging directory.")
             return
 
         customers_frames = []
@@ -352,11 +352,12 @@ def process_data():
 
                 processed_files.append(path)
 
-            except Exception:
+            except Exception as e:
+                log_message(f"Failed to process file {os.path.basename(path)}: {e}")
                 continue
 
         if not customers_frames and not transactions_frames:
-            messagebox.showinfo("Process data", "Brak poprawnych danych do przetwarzania.")
+            messagebox.showinfo("Process data", "No valid data for processing.")
             return
 
         try:
@@ -364,8 +365,9 @@ def process_data():
         except Exception as e:
             messagebox.showerror(
                 "Process data",
-                f"Nie udało się połączyć z bazą danych. Sprawdź Docker / MySQL.\n\n{e}"
+                f"Failed to connect to database. Check logs for details."
             )
+            log_message(f"Failed to connect to database: {e}")
             return
 
         ensure_tables_exist(conn)
@@ -386,13 +388,15 @@ def process_data():
             dst = os.path.join(PROCESSED_DIR, os.path.basename(src))
             try:
                 shutil.move(src, dst)
-            except Exception:
-                pass
+            except Exception as e:
+                log_message(f"Failed to move file {os.path.basename(src)} to processed: {e}")
 
-        messagebox.showinfo("Process data", "Przetwarzanie danych zakończone pomyślnie.")
+        messagebox.showinfo("Process data", "Data processing completed successfully.")
+        log_message("Data processing completed successfully.")
 
     except Exception as e:
-        messagebox.showerror("Process data", f"Wystąpił błąd:\n{e}")
+        messagebox.showerror("Process data", f"Data processing failed. Check logs for details.")
+        log_message(f"Data processing failed: {e}")
 
 
    
