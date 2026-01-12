@@ -6,13 +6,7 @@ from datetime import datetime
 
 from .config import RFM_ANALYSIS_DIR, LOGS_PATH
 from .processdata import get_db_connection
-
-
-def log_message(message: str) -> None:
-    os.makedirs(os.path.dirname(LOGS_PATH), exist_ok=True)
-    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open(LOGS_PATH, "a", encoding="utf-8") as f:
-        f.write(f"[{ts}] {message}\n")
+from .logger import log_message
 
 
 def fetch_data():
