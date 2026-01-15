@@ -2,30 +2,12 @@ import os
 import shutil
 import re
 from datetime import datetime
-
 import pandas as pd
-import mysql.connector
-from mysql.connector import Error
 from tkinter import messagebox
 
 from .config import STAGING_DIR, PROCESSED_DIR
+from .db import get_db_connection
 from .logger import log_message
-
-DB_HOST = "localhost"
-DB_PORT = 3306
-DB_USER = "cdp_user"
-DB_PASSWORD = "cdp12345"
-DB_NAME = "cdp_lite"
-
-
-def get_db_connection():
-    return mysql.connector.connect(
-        host=DB_HOST,
-        port=DB_PORT,
-        user=DB_USER,
-        password=DB_PASSWORD,
-        database=DB_NAME,
-    )
 
 
 def ensure_tables_exist(conn):

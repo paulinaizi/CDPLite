@@ -1,11 +1,9 @@
 from tkinter import messagebox
 import os
 import pandas as pd
-import mysql.connector
-from datetime import datetime
 
 from .config import RFM_ANALYSIS_DIR, LOGS_PATH
-from .processdata import get_db_connection
+from .db import get_db_connection
 from .logger import log_message
 
 
