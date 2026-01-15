@@ -342,14 +342,12 @@ def process_data():
             messagebox.showwarning("Process warning", "No valid data for processing. Check logs for details.")
             return
 
-        try:
-            conn = get_db_connection()
-        except Exception as e:
+        conn = get_db_connection()
+        if conn is None:
             messagebox.showerror(
                 "Process error",
-                f"Failed to connect to database. Check logs for details."
+                "Failed to connect to database. Check logs for details."
             )
-            log_message(f"Failed to connect to database: {e}")
             return
 
         ensure_tables_exist(conn)
@@ -379,10 +377,3 @@ def process_data():
     except Exception as e:
         messagebox.showerror("Process error", f"Data processing failed. Check logs for details.")
         log_message(f"Data processing failed: {e}")
-
-
-   
-
-
-    
-    
