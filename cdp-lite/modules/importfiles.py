@@ -40,6 +40,9 @@ def import_files():
     if success_count == len(files):
         messagebox.showinfo("Import info", f"Imported {success_count} files successfully.")
     elif success_count == 0:
-        messagebox.showwarning("Import info", "Failed to import all files.")
+        messagebox.showerror("Import error", "Failed to import all files. Check logs for details.")
     else:
-        messagebox.showinfo("Import info", f"Imported {success_count}/{len(files)} files. Some files failed.")
+        messagebox.showwarning("Import warning",
+                               f"Imported {success_count}/{len(files)} files. "
+                               f"Some files failed. "
+                               f"Check logs for details.")

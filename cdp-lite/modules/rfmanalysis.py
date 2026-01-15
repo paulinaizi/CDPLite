@@ -53,6 +53,9 @@ def rfm_analysis():
         rfm = calculate_rfm(df)
         save_rfm_results(rfm)
         log_message("RFM analysis completed successfully.")
+        messagebox.showinfo("RFM info", "RFM analysis completed successfully.")
 
     except Exception as e:
         log_message(f"Error during RFM analysis: {e}")
+        messagebox.showerror("RFM error", "Error during RFM analysis. Check logs for details.")
+

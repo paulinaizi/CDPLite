@@ -12,7 +12,7 @@ def open_report():
 
     if not os.path.exists(pbix_path):
         messagebox.showwarning(
-            "File missing",
+            "Report warning",
             "Power BI report file not found."
         )
         log_message("Power BI report not found.")
@@ -31,7 +31,7 @@ def open_report():
     except Exception as e:
         log_message(f"Failed to open Power BI report: {e}")
         messagebox.showerror(
-            "Error",
+            "Report error",
             "Unable to open Power BI report.\n"
             "Ensure Power BI Desktop is installed."
         )

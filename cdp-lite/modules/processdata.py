@@ -316,7 +316,7 @@ def process_data():
         ]
 
         if not files:
-            messagebox.showinfo("Process data", "No files in the staging directory.")
+            messagebox.showinfo("Process info", "No files in the staging directory.")
             return
 
         customers_frames = []
@@ -357,14 +357,14 @@ def process_data():
                 continue
 
         if not customers_frames and not transactions_frames:
-            messagebox.showinfo("Process data", "No valid data for processing.")
+            messagebox.showwarning("Process warning", "No valid data for processing. Check logs for details.")
             return
 
         try:
             conn = get_db_connection()
         except Exception as e:
             messagebox.showerror(
-                "Process data",
+                "Process error",
                 f"Failed to connect to database. Check logs for details."
             )
             log_message(f"Failed to connect to database: {e}")
@@ -391,11 +391,11 @@ def process_data():
             except Exception as e:
                 log_message(f"Failed to move file {os.path.basename(src)} to processed: {e}")
 
-        messagebox.showinfo("Process data", "Data processing completed successfully.")
+        messagebox.showinfo("Process info", "Data processing completed successfully.")
         log_message("Data processing completed successfully.")
 
     except Exception as e:
-        messagebox.showerror("Process data", f"Data processing failed. Check logs for details.")
+        messagebox.showerror("Process error", f"Data processing failed. Check logs for details.")
         log_message(f"Data processing failed: {e}")
 
 
