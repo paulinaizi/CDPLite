@@ -1,18 +1,10 @@
 from tkinter import messagebox
 import os
 import pandas as pd
-import mysql.connector
-from datetime import datetime
 
 from .config import RFM_ANALYSIS_DIR, LOGS_PATH
-from .processdata import get_db_connection
-
-
-def log_message(message: str) -> None:
-    os.makedirs(os.path.dirname(LOGS_PATH), exist_ok=True)
-    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open(LOGS_PATH, "a", encoding="utf-8") as f:
-        f.write(f"[{ts}] {message}\n")
+from .db import get_db_connection
+from .logger import log_message
 
 
 def fetch_data():
@@ -59,6 +51,9 @@ def rfm_analysis():
         rfm = calculate_rfm(df)
         save_rfm_results(rfm)
         log_message("RFM analysis completed successfully.")
+        messagebox.showinfo("RFM info", "RFM analysis completed successfully.")
 
     except Exception as e:
         log_message(f"Error during RFM analysis: {e}")
+        messagebox.showerror("RFM error", "Error during RFM analysis. Check logs for details.")
+

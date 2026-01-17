@@ -2,36 +2,12 @@ import os
 import shutil
 import re
 from datetime import datetime
-
 import pandas as pd
-import mysql.connector
-from mysql.connector import Error
 from tkinter import messagebox
 
-from .config import STAGING_DIR, PROCESSED_DIR, LOGS_PATH
-
-DB_HOST = "localhost"
-DB_PORT = 3306
-DB_USER = "cdp_user"
-DB_PASSWORD = "cdp12345"
-DB_NAME = "cdp_lite"
-
-
-def log_message(message: str) -> None:
-    os.makedirs(os.path.dirname(LOGS_PATH), exist_ok=True)
-    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open(LOGS_PATH, "a", encoding="utf-8") as f:
-        f.write(f"[{ts}] {message}\n")
-
-
-def get_db_connection():
-    return mysql.connector.connect(
-        host=DB_HOST,
-        port=DB_PORT,
-        user=DB_USER,
-        password=DB_PASSWORD,
-        database=DB_NAME,
-    )
+from .config import STAGING_DIR, PROCESSED_DIR
+from .db import get_db_connection
+from .logger import log_message
 
 
 def ensure_tables_exist(conn):
@@ -322,7 +298,7 @@ def process_data():
         ]
 
         if not files:
-            messagebox.showinfo("Process data", "Brak plików w katalogu staging.")
+            messagebox.showinfo("Process info", "No files in the staging directory.")
             return
 
         customers_frames = []
@@ -358,19 +334,19 @@ def process_data():
 
                 processed_files.append(path)
 
-            except Exception:
+            except Exception as e:
+                log_message(f"Failed to process file {os.path.basename(path)}: {e}")
                 continue
 
         if not customers_frames and not transactions_frames:
-            messagebox.showinfo("Process data", "Brak poprawnych danych do przetwarzania.")
+            messagebox.showwarning("Process warning", "No valid data for processing. Check logs for details.")
             return
 
-        try:
-            conn = get_db_connection()
-        except Exception as e:
+        conn = get_db_connection()
+        if conn is None:
             messagebox.showerror(
-                "Process data",
-                f"Nie udało się połączyć z bazą danych. Sprawdź Docker / MySQL.\n\n{e}"
+                "Process error",
+                "Failed to connect to database. Check logs for details."
             )
             return
 
@@ -392,17 +368,12 @@ def process_data():
             dst = os.path.join(PROCESSED_DIR, os.path.basename(src))
             try:
                 shutil.move(src, dst)
-            except Exception:
-                pass
+            except Exception as e:
+                log_message(f"Failed to move file {os.path.basename(src)} to processed: {e}")
 
-        messagebox.showinfo("Process data", "Przetwarzanie danych zakończone pomyślnie.")
+        messagebox.showinfo("Process info", "Data processing completed successfully.")
+        log_message("Data processing completed successfully.")
 
     except Exception as e:
-        messagebox.showerror("Process data", f"Wystąpił błąd:\n{e}")
-
-
-   
-
-
-    
-    
+        messagebox.showerror("Process error", f"Data processing failed. Check logs for details.")
+        log_message(f"Data processing failed: {e}")

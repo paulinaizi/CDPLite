@@ -1,17 +1,10 @@
 import os
 import sys
 import subprocess
-from datetime import datetime
 from tkinter import messagebox
 
-from .config import REPORT_DIR, LOGS_PATH
-
-
-def log_message(message: str) -> None:
-    os.makedirs(os.path.dirname(LOGS_PATH), exist_ok=True)
-    ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    with open(LOGS_PATH, "a", encoding="utf-8") as f:
-        f.write(f"[{ts}] {message}\n")
+from .config import REPORT_DIR
+from .logger import log_message
 
 
 def open_report():
@@ -19,7 +12,7 @@ def open_report():
 
     if not os.path.exists(pbix_path):
         messagebox.showwarning(
-            "File missing",
+            "Report warning",
             "Power BI report file not found."
         )
         log_message("Power BI report not found.")
@@ -38,7 +31,7 @@ def open_report():
     except Exception as e:
         log_message(f"Failed to open Power BI report: {e}")
         messagebox.showerror(
-            "Error",
+            "Report error",
             "Unable to open Power BI report.\n"
             "Ensure Power BI Desktop is installed."
         )
